@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
     <groupId>lk.ijse.cms</groupId>
-    <artifactId>service-patient</artifactId>
+    <artifactId>patient-service</artifactId>
     <version>1.0.0</version>
     <name>Patient-Service</name>
     <description>Patient Microservice for Clinic Management System</description>
