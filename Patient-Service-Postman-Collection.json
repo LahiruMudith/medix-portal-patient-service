@@ -1,0 +1,253 @@
+{
+  "info": {
+    "_postman_id": "patient-service-uuid-1",
+    "name": "Patient Service API",
+    "description": "Postman Collection for testing the Patient-Service directly (port 8000) or via API Gateway (port 7000). Includes NIC validation and profile picture cloud storage endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register Patient",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "patientId",
+              "value": "716500500V",
+              "type": "text"
+            },
+            {
+              "key": "name",
+              "value": "Lahiru Mudith",
+              "type": "text"
+            },
+            {
+              "key": "dateOfBirth",
+              "value": "2000-05-12",
+              "type": "text"
+            },
+            {
+              "key": "gender",
+              "value": "Male",
+              "type": "text"
+            },
+            {
+              "key": "contactNumber",
+              "value": "0771234567",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "lahiru@example.com",
+              "type": "text"
+            },
+            {
+              "key": "address",
+              "value": "Colombo, Sri Lanka",
+              "type": "text"
+            },
+            {
+              "key": "bloodGroup",
+              "value": "O+",
+              "type": "text"
+            },
+            {
+              "key": "photo",
+              "description": "Attach a patient avatar image here",
+              "type": "file",
+              "src": []
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/patients",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Patients",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/patients",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Patient by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/patients/716500500V",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "patients",
+            "716500500V"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Patient Photo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/patients/716500500V/photo",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "patients",
+            "716500500V",
+            "photo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Patient Details",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "name",
+              "value": "Lahiru Mudith Perera",
+              "type": "text"
+            },
+            {
+              "key": "dateOfBirth",
+              "value": "2000-05-12",
+              "type": "text"
+            },
+            {
+              "key": "gender",
+              "value": "Male",
+              "type": "text"
+            },
+            {
+              "key": "contactNumber",
+              "value": "0779998887",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "lahiru.p@example.com",
+              "type": "text"
+            },
+            {
+              "key": "address",
+              "value": "Galle, Sri Lanka",
+              "type": "text"
+            },
+            {
+              "key": "bloodGroup",
+              "value": "O-",
+              "type": "text"
+            },
+            {
+              "key": "photo",
+              "description": "Optional: Update avatar image here",
+              "type": "file",
+              "src": []
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/patients/716500500V",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "patients",
+            "716500500V"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Patient",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/patients/716500500V",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "patients",
+            "716500500V"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ]
+}
